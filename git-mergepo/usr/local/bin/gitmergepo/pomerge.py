@@ -53,7 +53,7 @@ def merge_entry(oentry, aentry, bentry, branchname):
         # 3. Entries already exists
         if oentry and oentry.msgstr == aentry.msgstr and oentry.msgstr == bentry.msgstr:
             # Nothing changed
-            result = oentry
+            result = aentry
         elif oentry and oentry.msgstr == aentry.msgstr and oentry.msgstr != bentry.msgstr:
             # aentry updated
             result = bentry
@@ -61,7 +61,7 @@ def merge_entry(oentry, aentry, bentry, branchname):
             # bentry updated
             result = aentry
         elif aentry.msgstr == bentry.msgstr:
-            retult = aentry
+            result = aentry
         else:
             # Merge conflict, aentry and bentry have been changed
             #print "Conflict ", str(oentry.msgstr), ", ", str(aentry.msgstr), ", ", str(bentry.msgstr)
