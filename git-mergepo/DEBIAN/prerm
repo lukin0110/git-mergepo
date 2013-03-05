@@ -1,15 +1,15 @@
 #!/bin/sh
-echo "Removing /usr/local/bin/git-merge-po"
-if [ -f /usr/local/bin/git-merge-po ]
+echo "Removing /usr/local/bin/gitmergepo"
+if [ -d /usr/local/bin/git-merge-po ]
 then
-	rm /usr/local/bin/git-merge-po
+	rm -Rf /usr/local/bin/gitmergepo
 fi
 
-echo "Removing /usr/local/bin/git-merge-mo"
-if [ -f /usr/local/bin/git-merge-mo ]
-then
-	rm /usr/local/bin/git-merge-mo 
-fi
+#echo "Removing /usr/local/bin/git-merge-mo"
+#if [ -f /usr/local/bin/git-merge-mo ]
+#then
+#	rm /usr/local/bin/git-merge-mo
+#fi
 
 # Search for 'merge "pofile"' and delete it together with the 2 consecutive lines
 echo "Removing po driver from /etc/gitconfig"

@@ -1,8 +1,8 @@
 #!/bin/sh
 echo "Post installation"
 
-CONFIG_PO='\n[merge "pofile"]\n\tname = Gettext *.po merge driver\n\tdriver = /usr/local/bin/gitmergepo/mergepo.py %O %A %B'
-CONFIG_MO='\n[merge "mofile"]\n\tname = Gettext *.mo merge driver\n\tdriver = /usr/local/bin/git-merge-mo %O %A %B\n'
+CONFIG_PO='\n[merge "pofile"]\n\tname = Gettext *.po merge driver\n\tdriver = /usr/local/bin/gitmergepo/pomerge.py %O %A %B'
+CONFIG_MO='\n[merge "mofile"]\n\tname = Gettext *.mo merge driver\n\tdriver = /usr/local/bin/gitmergepo/git-merge-mo %O %A %B\n'
 
 if [ ! -f /etc/gitconfig ]
 then
