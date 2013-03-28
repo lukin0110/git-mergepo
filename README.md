@@ -16,6 +16,10 @@ To activate the custom merge drivers you'll have to add the following lines to t
 *.mo   merge=mofile
 ```
 
+Download
+========
+https://github.com/lukin0110/git-mergepo/raw/master/git-mergepo.deb
+
 Nerdy stuff
 ===========
 Build the debian package manually:
